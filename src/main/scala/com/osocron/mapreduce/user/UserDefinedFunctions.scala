@@ -1,4 +1,4 @@
-package com.geophy.mapreduce.user
+package com.osocron.mapreduce.user
 
 import scala.util.Try
 

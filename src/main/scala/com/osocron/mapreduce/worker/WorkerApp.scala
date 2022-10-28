@@ -1,6 +1,6 @@
-package com.geophy.mapreduce.worker
+package com.osocron.mapreduce.worker
 
-import com.geophy.mapreduce.worker.cli.{CliConfig, CliParser}
+import com.osocron.mapreduce.worker.cli.{CliConfig, CliParser}
 import io.grpc.protobuf.services.ProtoReflectionService
 import io.grpc.{ManagedChannelBuilder, ServerBuilder}
 import master.RegisterWorkerRequest

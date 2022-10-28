@@ -6,11 +6,11 @@ A toy implementation of the MapReduce model for distributed data processing syst
 
 To run the master process run:
 ```
-sbt "runMain com.geophy.mapreduce.master.MasterApp"
+sbt "runMain com.osocron.mapreduce.master.MasterApp"
 ```
 
 To run a worker process run:
 ```
-sbt "runMain com.geophy.mapreduce.worker.WorkerApp -p=9991 -i=Worker1"
+sbt "runMain com.osocron.mapreduce.worker.WorkerApp -p=9991 -i=Worker1"
 ```
 

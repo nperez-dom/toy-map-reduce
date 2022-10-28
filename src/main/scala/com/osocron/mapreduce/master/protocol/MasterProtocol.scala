@@ -1,6 +1,6 @@
-package com.geophy.mapreduce.master.protocol
+package com.osocron.mapreduce.master.protocol
 
-import com.geophy.mapreduce.domain.WorkerNode
+import com.osocron.mapreduce.domain.WorkerNode
 
 trait MasterProtocol
 case class RegisterWorker(workerId: String, host: String, port: Int) extends MasterProtocol

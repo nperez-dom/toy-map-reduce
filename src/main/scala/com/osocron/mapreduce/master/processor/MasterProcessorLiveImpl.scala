@@ -1,10 +1,11 @@
-package com.geophy.mapreduce.master.processor
+package com.osocron.mapreduce.master.processor
 
-import com.geophy.mapreduce.domain.TaskType.TaskType
-import com.geophy.mapreduce.domain.{TaskType, WorkerNode}
-import com.geophy.mapreduce.master._
-import com.geophy.mapreduce.master.data.{MapTask, MapTasks, ReduceTask, Task => MTask}
-import com.geophy.mapreduce.master.protocol.{MapTaskFinished, MasterProtocol, ReduceTaskFinished, RegisterWorker, WorkerNodeUnresponsive}
+import com.osocron.mapreduce.domain.TaskType.TaskType
+import com.osocron.mapreduce.domain.{TaskType, WorkerNode}
+import com.osocron.mapreduce.master._
+import com.osocron.mapreduce.master.data.{MapTask, MapTasks, ReduceTask, Task => MTask}
+import com.osocron.mapreduce.master.protocol.{MapTaskFinished, MasterProtocol, ReduceTaskFinished, RegisterWorker, WorkerNodeUnresponsive}
+import com.osocron.mapreduce.master.{MasterError, NodeUnresponsiveError}
 import io.grpc.{ManagedChannelBuilder, Status}
 import scalapb.zio_grpc.ZManagedChannel
 import worker.{HealthCheckRequest, StartMapTaskRequest, StartMapTaskResponse, StartReduceTaskRequest, StartReduceTaskResponse, TaskStatus}

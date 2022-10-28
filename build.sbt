@@ -1,12 +1,12 @@
 ThisBuild / scalaVersion := "2.13.5"
-ThisBuild / organization := "com.geophy"
+ThisBuild / organization := "com.osocron"
 
 lazy val mapReduce = (project in file("."))
   .settings(
     name := "toy-map-reduce",
     scalacOptions += "-Ymacro-annotations",
     libraryDependencies ++= commonDeps,
-    mainClass in assembly := Some("com.geophy.mapreduce.master.MasterApp"),
+    mainClass in assembly := Some("com.osocron.mapreduce.master.MasterApp"),
     assemblyJarName in assembly := "master.jar"
   )
 

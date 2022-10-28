@@ -1,7 +1,7 @@
-package com.geophy.mapreduce.worker.services
+package com.osocron.mapreduce.worker.services
 
-import com.geophy.mapreduce.master.data.{MapTask, ReduceTask}
-import com.geophy.mapreduce.user.UserDefinedFunctions
+import com.osocron.mapreduce.master.data.{MapTask, ReduceTask}
+import com.osocron.mapreduce.user.UserDefinedFunctions
 import io.grpc.Status
 import master.{MapTaskFinishedRequest, ReduceTaskFinishedRequest}
 import master.ZioMaster.MasterServiceClient

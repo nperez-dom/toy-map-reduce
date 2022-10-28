@@ -1,6 +1,6 @@
-package com.geophy.mapreduce.master
+package com.osocron.mapreduce.master
 
-import com.geophy.mapreduce.master.protocol.{MapTaskFinished, MasterProtocol, ReduceTaskFinished, RegisterWorker}
+import com.osocron.mapreduce.master.protocol.{MapTaskFinished, MasterProtocol, ReduceTaskFinished, RegisterWorker}
 import io.grpc.Status
 import master.ZioMaster.MasterService
 import master.{MapTaskFinishedRequest, MapTaskFinishedResponse, ReduceTaskFinishedRequest, ReduceTaskFinishedResponse, RegisterWorkerRequest, RegisterWorkerResponse}

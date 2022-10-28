@@ -1,4 +1,4 @@
-package com.geophy.mapreduce.master
+package com.osocron.mapreduce.master
 
 import io.grpc.Status
 

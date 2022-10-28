@@ -1,4 +1,4 @@
-package com.geophy.mapreduce.worker.cli
+package com.osocron.mapreduce.worker.cli
 
 import scopt.{OParser, OParserBuilder}
 

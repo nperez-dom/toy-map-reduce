@@ -1,4 +1,4 @@
-package com.geophy.mapreduce.master.data
+package com.osocron.mapreduce.master.data
 
 import worker.TaskStatus
 
@@ -17,7 +17,7 @@ case class ReduceTask(
 ) extends Task
 
 object MapTasks {
-  val mapTasks = Map(
+  val mapTasks: Map[String, MapTask] = Map(
     "1"  -> MapTask(
       "1",
       "worker-fs/map-task-input/file00.txt",

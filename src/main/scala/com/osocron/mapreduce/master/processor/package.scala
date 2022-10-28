@@ -1,6 +1,6 @@
-package com.geophy.mapreduce.master
+package com.osocron.mapreduce.master
 
-import com.geophy.mapreduce.master.protocol.MasterProtocol
+import com.osocron.mapreduce.master.protocol.MasterProtocol
 import zio._
 
 package object processor {

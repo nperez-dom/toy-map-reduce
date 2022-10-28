@@ -1,6 +1,6 @@
-package com.geophy.mapreduce.master
+package com.osocron.mapreduce.master
 
-import com.geophy.mapreduce.master.processor.MasterProcessor
+import com.osocron.mapreduce.master.processor.MasterProcessor
 import io.grpc.ServerBuilder
 import io.grpc.protobuf.services.ProtoReflectionService
 import scalapb.zio_grpc.CanBind.canBindAny

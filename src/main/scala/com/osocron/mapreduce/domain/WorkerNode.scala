@@ -1,6 +1,6 @@
-package com.geophy.mapreduce.domain
+package com.osocron.mapreduce.domain
 
-import com.geophy.mapreduce.master.MasterError
+import com.osocron.mapreduce.master.MasterError
 import worker.TaskStatus
 import worker.ZioWorker.WorkerServiceClient
 import zio.Layer
@@ -15,7 +15,3 @@ case class WorkerNode(
     clientLayer: Layer[MasterError, WorkerServiceClient]
 )
 
-object TaskType extends Enumeration {
-  type TaskType = Value
-  val Map, Reduce = Value
-}

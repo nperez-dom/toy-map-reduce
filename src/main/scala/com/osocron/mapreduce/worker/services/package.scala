@@ -1,4 +1,4 @@
-package com.geophy.mapreduce.worker
+package com.osocron.mapreduce.worker
 
 import master.ZioMaster.MasterServiceClient
 import worker.ZioWorker.WorkerService
