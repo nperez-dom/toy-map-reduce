@@ -1,6 +1,6 @@
 # Toy MapReduce
 
-A toy implementation of the MapReduce model for distributed data processing systems.
+A toy implementation of the MapReduce model for distributed data processing.
 
 ## Running the application
 
