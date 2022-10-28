@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+service WorkerService {
+  rpc HealthCheck(HealthCheckRequest) returns (HealthCheckResponse);
+  rpc StartMapTask(StartMapTaskRequest) returns (StartMapTaskResponse);
+  rpc StartReduceTask(StartReduceTaskRequest) returns (StartReduceTaskResponse);
+}
+
+message HealthCheckRequest {
+  string message = 1;
+}
+
+message HealthCheckResponse {
+  TaskStatus status = 1;
+  string taskID = 2;
+}
+
+message StartMapTaskRequest {
+  string taskId = 1;
+  string inputLocation = 2;
+}
+
+message StartMapTaskResponse {
+  string ack = 1;
+  string startTime = 2;
+  TaskStatus status = 3;
+}
+
+message StartReduceTaskRequest {
+  string partitionKey = 1;
+  repeated string inputLocations = 2;
+}
+
+message StartReduceTaskResponse {
+  string ack = 1;
+  string startTime = 2;
+  TaskStatus status = 3;
+}
+
+enum TaskStatus {
+  IDLE = 0;
+  IN_PROGRESS = 1;
+  COMPLETED = 2;
+}

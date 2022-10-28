@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+service MasterService {
+  rpc RegisterWorker(RegisterWorkerRequest) returns (RegisterWorkerResponse);
+  rpc MapTaskFinished(MapTaskFinishedRequest) returns (MapTaskFinishedResponse);
+  rpc ReduceTaskFinished(ReduceTaskFinishedRequest) returns (ReduceTaskFinishedResponse);
+}
+
+message RegisterWorkerRequest {
+  string workerId = 1;
+  string host = 2;
+  int32 port = 3;
+}
+
+message RegisterWorkerResponse {
+  uint32 leaseTimeMillis = 1;
+}
+
+message MapTaskFinishedRequest {
+  string workerId = 1;
+  string taskID = 2;
+  repeated string outputLocation = 3;
+}
+
+message MapTaskFinishedResponse {
+  string ack = 1;
+}
+
+message ReduceTaskFinishedRequest {
+  string workerId = 1;
+  string partitionKey = 2;
+  string outputLocation = 3;
+}
+
+message ReduceTaskFinishedResponse {
+  string ack = 1;
+}
